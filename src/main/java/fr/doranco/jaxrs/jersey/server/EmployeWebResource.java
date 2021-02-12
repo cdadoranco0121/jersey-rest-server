@@ -113,8 +113,8 @@ public class EmployeWebResource implements IEmployeWebResource {
 	@Override
 	@POST
 	@Path("add")
-	@Consumes(MediaType.APPLICATION_XML + CHARSET)
-	@Produces(MediaType.APPLICATION_XML + CHARSET)
+	@Consumes({MediaType.APPLICATION_XML + CHARSET, MediaType.APPLICATION_JSON + CHARSET})
+	@Produces({MediaType.APPLICATION_XML + CHARSET, MediaType.APPLICATION_JSON + CHARSET})
 	public Response addEmploye(Employe employe) {
 		System.out.println("POST employes/add");
 		// TEST
